@@ -6,8 +6,16 @@ public class question517 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the number of lines: ");
+        System.out.println("Enter the number of lines(1-15): ");
         int limit = scan.nextInt();
+        // 1-15 Arası Sayı Kontrolü
+        if(limit < 1){
+            System.out.println("Lütfen 1-15 Arası Bir Sayı Girin!");
+            return;
+        } else if(limit > 15) {
+            System.out.println("Lütfen 1-15 Arası Bir Sayı Girin");
+            return;
+        }
             //En Sonda Ekrana Yazdırmak İçin Boş Bir String Değer Oluşturuyoruz
         String Mesaj = "";
         for(int i = 1; i <= limit; i++) {
